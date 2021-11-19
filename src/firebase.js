@@ -1,17 +1,15 @@
-import firebase from './firebase.js';
-
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from '@firebase/firestore';
 const firebaseConfig = {
-	apiKey: 'AIzaSyBEc7Ua8EnkB3tH2e0gHl4IH_0UEr_ofHU',
-	authDomain: 'kancomputer-f354a.firebaseapp.com',
-	projectId: 'kancomputer-f354a',
-	storageBucket: 'kancomputer-f354a.appspot.com',
-	messagingSenderId: '478648301853',
-	appId: '1:478648301853:web:c31ca5b2a2f6c5337109f4',
-	measurementId: 'G-976GK0L99J',
+	apiKey: 'AIzaSyDzBFspDSU8wSezDMeOwnjysZ7V2mmAn5U',
+	authDomain: 'kancomputer-3d5d5.firebaseapp.com',
+	projectId: 'kancomputer-3d5d5',
+	storageBucket: 'kancomputer-3d5d5.appspot.com',
+	messagingSenderId: '269909701514',
+	appId: '1:269909701514:web:42d768100d96ae19e4ce73',
+	measurementId: 'G-L5L7TPYE27',
 };
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
-//const firebaseApp = firebase.initializeApp(firebaseConfig);
-
-//const db = firebaseApp.firestore();
-
-//export default db;
+export const db = getFirestore(app);

@@ -1,0 +1,10 @@
+.computer2 {
+	display: flex;
+	flex: 0.5;
+	align-items: center;
+	justify-content: center;
+	background-color: yellowgreen;
+	flex-direction: column;
+	flex-wrap: wrap;
+	color: white;
+}

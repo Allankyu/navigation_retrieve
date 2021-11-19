@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import PostChild from './PostChild';
+import { Button } from '@material-ui/core';
+import { db } from './firebase';
+import { collection, getDocs, addDoc } from 'firebase/firestore';
 
-function Posts({ name, image }) {
+function Posts({ message }) {
+	const [posts, setPosts] = useState([]);
+	const usersCollectionRef = collection(db, 'posts');
+
+	useEffect(() => {
+		const getUsers = async () => {
+			const data = await getDocs(usersCollectionRef);
+
+			setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+		};
+		getUsers();
+	}, []);
+
 	return (
 		<div>
-			{name}
-			<img src={image} alt="hello" style={{ width: 100, height: 100 }} />
+			{' '}
+			{posts.map((post) => (
+				<PostChild key={post.id} message={post.message} />
+			))}
 		</div>
 	);
 }

@@ -1,0 +1,24 @@
+.navbar {
+	background-color: tomato;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	overflow: hidden;
+	min-height: auto;
+	flex: 1;
+}
+a:link {
+	text-decoration: none;
+}
+.navbar > nav > ul {
+	display: flex;
+	list-style: none;
+	padding: 20px;
+}
+.navbar > nav > ul > li {
+	justify-content: space-evenly;
+	padding: 30px;
+	flex-wrap: wrap;
+	flex: 1;
+}
