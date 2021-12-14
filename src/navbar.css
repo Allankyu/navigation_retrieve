@@ -14,11 +14,12 @@ a:link {
 .navbar > nav > ul {
 	display: flex;
 	list-style: none;
-	padding: 20px;
+	padding: 10 px;
+	flex-wrap: wrap;
 }
 .navbar > nav > ul > li {
 	justify-content: space-evenly;
-	padding: 30px;
+	padding: 10px;
 	flex-wrap: wrap;
 	flex: 1;
 }
